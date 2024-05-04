@@ -7,7 +7,9 @@ HD1_dir = '/Volumes/wd/CMSOpenData'
 HD2_dir = '/Volumes/ExtDisk-1/opendata'
 
 # Check which storage to use based on mount status
-if os.path.exists(HD1_dir):
+if len(sys.argv) > 1:
+    root_dir = os.path.abspath(sys.argv[1])
+elif os.path.exists(HD1_dir):
     root_dir = HD1_dir
 elif os.path.exists(HD2_dir):
     root_dir = HD2_dir

@@ -3,7 +3,8 @@ import subprocess
 
 # Define directories
 mac_dir = '/Users/allen/opendata'
-HD1_dir = '/Volumes/wd/CMSOpenData'
+#HD1_dir = '/Volumes/wd/CMSOpenData'
+HD1_dir = '/media/exfat/CMSOpenData'
 HD2_dir = '/Volumes/ExtDisk-1/opendata'
 
 # Check which storage to use based on mount status
