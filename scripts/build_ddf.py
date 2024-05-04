@@ -73,37 +73,6 @@ def check_weights(files):
     return WeightInfo(lhe_scale_present, ps_present)
 
 
-#def count_events_sim(files):
-#    """Count events and compute event weights in a set of files.
-#
-#    Arguments:
-#        files:  Iterable with paths to NanoAOD files with added event
-#            counts.
-#
-#    Return value:
-#        Tuple consisting of the number of all processed events, number
-#        of selected events, and mean generator-level event weight before
-#        the selection.
-#    """
-#
-#    num_selected = 0
-#    sum_nominal_weight = 0.
-#    for path in files:
-#        input_file = ROOT.TFile(path)
-#
-#
-#        event_tree = input_file.Get('Events')
-#        for entry in event_tree:
-#            sum_nominal_weight += entry.Generator_weight
-#        num_selected += event_tree.GetEntries()
-#
-#        input_file.Close()
-#
-#    num_total = num_selected
-#    return num_total, num_selected, sum_nominal_weight / num_total
-#    #return num_total, num_selected, 0
-#
-
 def process_file(path):
     """Process a single ROOT file using uproot to count events and sum weights."""
     with uproot.open(path) as file:
@@ -185,15 +154,16 @@ if __name__ == '__main__':
     if not os.path.exists(ddf_target_dir):
         os.mkdir(ddf_target_dir)
     files = find_files(args.config)
-    stem_name = os.path.abspath(args.config).split('/')[-1]
-    stem_name = stem_name.split('.')[0]
+    dataset_name = os.path.abspath(args.config).split('/')[-1]
+    dataset_name = dataset_name.split('.')[0]
+    stem_name = dataset_name.split('SIM_')[-1]
 
     ddf = {
         'stem': stem_name,
         'files': files
     }
 
-    if 'SIM' in stem_name:
+    if 'SIM' in dataset_name:
         num_total, num_selected, mean_weight = count_events_sim(files)
         weight_info = check_weights(files)
         ddf.update({
