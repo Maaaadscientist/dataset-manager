@@ -62,8 +62,9 @@ def process_dataset_file(original_file_path, processed_file_path):
 
 # Process each dataset file
 for dataset_file in os.listdir(datasets_dir):
-    if dataset_file.endswith('_file_index.txt'):
+    if dataset_file.endswith('_file_index.txt') and dataset_file.startswith('CMS'):
         original_file_path = os.path.join(datasets_dir, dataset_file)
+        print(original_file_path)
         processed_file_path = os.path.join(processed_dir, dataset_file)
         process_dataset_file(original_file_path, processed_file_path)
         print(f"Created processed file for {dataset_file}")
