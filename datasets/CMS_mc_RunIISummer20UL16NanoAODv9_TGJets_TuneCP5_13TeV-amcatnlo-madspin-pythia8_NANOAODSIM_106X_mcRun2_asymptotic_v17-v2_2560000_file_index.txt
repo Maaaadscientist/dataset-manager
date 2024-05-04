@@ -1,0 +1,12 @@
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/1B39A09D-F3F0-2C45-9603-F061E42A1AB9.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/1ED0C35A-A815-D44E-901D-C3C83A06EFF3.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/2A71CD81-2A97-7A43-B632-D27AB9855123.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/39AA839B-6AB9-9F4C-BFF8-35106C4F107D.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/50EC7D29-E467-1E47-8A42-704AC0B32718.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/56A89B5E-25C5-0A47-8873-2F73005B0363.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/64497A0D-E4BB-F24F-BF8D-C529E39016AE.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/6BB1CE80-B096-364B-8B39-1F4BF0AC3D50.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/7BD2F140-E676-9346-9E9E-3955D69F7236.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/7C0F9EA3-2763-D448-9767-F0A7CA8BFFE4.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/A9F9929E-3078-1E49-8137-AB2FCC113AAB.root
+root://eospublic.cern.ch//eos/opendata/cms/mc/RunIISummer20UL16NanoAODv9/TGJets_TuneCP5_13TeV-amcatnlo-madspin-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/2560000/D9E1BEBD-3366-1540-9E9D-1C3BE895928A.root
