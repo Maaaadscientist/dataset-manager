@@ -10,7 +10,6 @@ import re
 import subprocess
 import shutil
 import sys
-from uuid import uuid4
 from multiprocessing import Pool, cpu_count
 import uproot
 import numpy as np
@@ -147,8 +146,6 @@ if __name__ == '__main__':
                             help='Configuration file with a list of datasets.')
     args = arg_parser.parse_args()
 
-    #os.environ['LD_LIBRARY_PATH']=''
-    #os.environ['PYTHONPATH']=''
     ddf_target_dir = 'ddf'
     subprocess.check_call(["mkdir", '-p', ddf_target_dir])
     if not os.path.exists(ddf_target_dir):
@@ -183,6 +180,5 @@ if __name__ == '__main__':
     ddf_tmp_path = os.path.join(ddf_target_dir, stem_name + '.yaml')
     with open(ddf_tmp_path, 'w') as f:
         yaml.safe_dump(ddf, f, default_flow_style=False)
-    print(4)
 
 
