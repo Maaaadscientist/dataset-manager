@@ -10,6 +10,7 @@ import re
 import subprocess
 import shutil
 import sys
+from uuid import uuid4
 from multiprocessing import Pool, cpu_count
 import uproot
 import numpy as np
@@ -17,6 +18,9 @@ import numpy as np
 import ROOT
 import yaml
 
+
+# Suppress specific messages
+ROOT.gROOT.ProcessLine("gErrorIgnoreLevel = kError;")  # Ignore all warnings and below (info messages)
 
 
 WeightInfo = namedtuple(
@@ -92,6 +96,7 @@ def count_events_sim(files):
         and the mean generator-level event weight.
     """
     with Pool(cpu_count()) as pool:
+    #with Pool(8) as pool:
         results = pool.map(process_file, files)
         
     num_total = sum(result[0] for result in results)
@@ -103,7 +108,7 @@ def count_events_sim(files):
         mean_weight = 0
 
     print(num_total, num_total, mean_weight)
-    return float(num_total), float(num_total), float(mean_weight)
+    return int(num_total), int(num_total), float(mean_weight)
 
 
 def count_events(files):
@@ -146,6 +151,8 @@ if __name__ == '__main__':
                             help='Configuration file with a list of datasets.')
     args = arg_parser.parse_args()
 
+    #os.environ['LD_LIBRARY_PATH']=''
+    #os.environ['PYTHONPATH']=''
     ddf_target_dir = 'ddf'
     subprocess.check_call(["mkdir", '-p', ddf_target_dir])
     if not os.path.exists(ddf_target_dir):
@@ -180,5 +187,6 @@ if __name__ == '__main__':
     ddf_tmp_path = os.path.join(ddf_target_dir, stem_name + '.yaml')
     with open(ddf_tmp_path, 'w') as f:
         yaml.safe_dump(ddf, f, default_flow_style=False)
+    print(4)
 
 
