@@ -3,7 +3,7 @@ import subprocess
 
 # Define directories
 mac_dir = '/Users/allen/opendata'
-HD1_dir = '/Volumes/wd/CMSOpenData'
+HD1_dir = '/media/exfat/CMSOpenData'
 HD2_dir = '/Volumes/ExtDisk-1/opendata'
 
 # Check which storage to use based on mount status
@@ -23,6 +23,8 @@ processed_dir = os.path.join(root_dir, 'processed')
 # Ensure the processed directory exists
 os.makedirs(processed_dir, exist_ok=True)
 
+# Prompt the user to input a keyword
+keyword = input("Enter a keyword to filter datasets: ")
 def get_remote_file_size(url):
     path_part = url.split('eospublic.cern.ch/')[1]
     # Construct the full path for xrdfs
@@ -92,9 +94,10 @@ def process_dataset_file(original_file_path, processed_file_path):
 # Process each dataset file
 for dataset_file in os.listdir(datasets_dir):
     if dataset_file.endswith('_file_index.txt') and dataset_file.startswith('CMS'):
-        original_file_path = os.path.join(datasets_dir, dataset_file)
-        processed_file_path = os.path.join(processed_dir, dataset_file)
-        process_dataset_file(original_file_path, processed_file_path)
+        if keyword.lower() in dataset_file.lower():
+            original_file_path = os.path.join(datasets_dir, dataset_file)
+            processed_file_path = os.path.join(processed_dir, dataset_file)
+            process_dataset_file(original_file_path, processed_file_path)
 
 print("Processed dataset files have been created in the 'processed' directory.")
 
